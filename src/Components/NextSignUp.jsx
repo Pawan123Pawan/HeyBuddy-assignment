@@ -1,8 +1,10 @@
 import React from "react";
 import twitter from "../assets/twitter.png";
 import { FaTwitter } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const NextSignUp = () => {
+    const navigate = useNavigate();
   return (
     <div className="w-full">
       <div className="lg:h-[600px] sm:flex sm:flex-col items-center gap-10 lg:flex-row">
@@ -49,7 +51,7 @@ const NextSignUp = () => {
           <div>
             <p className="text-base mt-3">
               Already have an account?
-              <span className="text-[#1da1f2] cursor-pointer"> Log in</span>
+              <span className="text-[#1da1f2] cursor-pointer" onClick={()=>navigate("/")}> Log in</span>
             </p>
           </div>
         </div>
